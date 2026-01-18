@@ -107,10 +107,10 @@ function analyzeHallucination(
   // Check 2: Does AI mention relevant keywords from description?
   const descriptionKeywords = descriptionLower
     .split(" ")
-    .filter((word) => word.length > 5)
+    .filter((word: string) => word.length > 5)
     .slice(0, 10);
 
-  const matchingKeywords = descriptionKeywords.filter((keyword) =>
+  const matchingKeywords = descriptionKeywords.filter((keyword: string) =>
     aiLower.includes(keyword)
   );
 
